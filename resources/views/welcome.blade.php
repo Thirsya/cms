@@ -23,7 +23,7 @@
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
             <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                    THIRSYA WIDYA SULAIMAN 
+                    THIRSYA WIDYA SULAIMAN <br>
                     NIM : 2041720233, KELAS : TI-2G
             </div>
         </div>
