@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,15 +16,20 @@ use Illuminate\Support\Facades\Route;
 
 //PRAKTIKUM 1
 //nomor1
-Route::get('/', function () {
-    echo "Hi! Selamat Datang di Website Laravel";}) -> name('hello'); 
+//Route::get('/', function () {
+    //echo "Hi! Selamat Datang di Website Laravel";}) -> name('hello'); 
 //nomor2 
-Route::get('/about', function () {
-    echo "2041720233 <br>";
-    echo "Thirsya Widya Sulaiman <br>";
-    echo "TI-2G";
-}) -> name('about');
+//Route::get('/about', function () {
+    //echo "2041720233 <br>";
+    //echo "Thirsya Widya Sulaiman <br>";
+    //echo "TI-2G";
+//}) -> name('about');
 //nomor3 
-Route::get('/articles/{id}', function ($id) {
-    echo "Ini adalah halaman Artikel dengan ID: ".$id;
-});
+//Route::get('/articles/{id}', function ($id) {
+    //echo "Ini adalah halaman Artikel dengan ID: ".$id;
+//});
+
+//PRAKTIKUM2 
+Route::get('/',[PageController::class, 'index']);
+Route::get('/about',[PageController::class, 'about']);
+Route::get('/articles/{id}',[PageController::class, 'articles']);
