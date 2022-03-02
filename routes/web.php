@@ -42,7 +42,7 @@ use App\Http\Controllers\ArticleController;
 //Route::get('/articles/{id}',[ArticleController::class, 'articles']);
 
 //PRAKTIKUM 3
-Route::get('/home', function () {
+/*Route::get('/home', function () {
     echo "WELCOME TO WEBSITE EDUCASTUDIO <br>";
     echo "By : Thirsya Widya Sulaiman";
 });
@@ -99,4 +99,13 @@ Route::get('/program', function(){
 Route::get("/about-us" , function(){
     echo "ABOUT US <br> Thirsya Widya Sulaiman <br> 2041720233 / TI-2G <br> @thirsya.widya <br>
     Kamal - Banyakan - Kediri";
+});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+*/
+
+Route::get('/home', function(){
+    return view('home');
 });
