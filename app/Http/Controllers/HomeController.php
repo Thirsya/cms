@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\contact;
 
 class HomeController extends Controller
 {
     public function index(){
-        return "Hi! Selamat Datang di Website Laravel";
+        return view('home', ['contacts'=>contact::index()]);
     }
+
 }
