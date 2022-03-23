@@ -100,14 +100,15 @@ Route::get("/about-us" , function(){
     echo "ABOUT US <br> Thirsya Widya Sulaiman <br> 2041720233 / TI-2G <br> @thirsya.widya <br>
     Kamal - Banyakan - Kediri";
 });
+*/
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-*/
+
 
 // Route::get('/home', function(){
 //     return view('home', ['chefs'=>chef::index()]);
 // });
 
-Route::get('/', [HomeController::class, 'index']);
+//Route::get('/', [HomeController::class, 'index']);

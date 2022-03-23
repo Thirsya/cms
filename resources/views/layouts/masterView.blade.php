@@ -4,6 +4,8 @@
     https://www.facebook.com/Mido.HHH
 -->
 <html lang="en">
+
+
 <head>
 	<title>King Of Pasta</title>
     
@@ -47,6 +49,37 @@ new WOW().init();
                 <li><a href="#map">LOCATONS</a></li>
                 <li><a href="#bestdishes">MENU</a></li>
                 <li><a href="#contactus">CONTACT</a></li>
+                @guest
+                              @if (Route::has('login'))
+                                          <li class="nav-item">
+                                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                          </li>
+                                       @endif
+                                       
+                                       @if (Route::has('register'))
+                                       <li class="nav-item">
+                                          <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                          </li>
+                                          @endif
+                                          @else
+                                          <li class="nav-item dropdown">
+                                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                                {{ Auth::user()->name }}
+                                             </a>
+                                             
+                                          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                                   onclick="event.preventDefault();
+                                                               document.getElementById('logout-form').submit();">
+                                                   {{ __('Logout') }}
+                                                </a>
+
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                                   @csrf
+                                                </form>
+                                          </div>
+                                       </li>
+                                    @endguest
             </ul>
         </nav>
       </div> <!--end of header-->
@@ -101,7 +134,7 @@ new WOW().init();
         <a href="https://twitter.com/Mido_A7X"><img src="images/twitter.png" width="68" height="68" class="twitter"
         alt="twitter"></a>
         <a href="#"><img src="images/youtube.png" width="68" height="69" class="youtube" alt="youtube"></a>
-        <a href="#"><img src="images/g+.png" width="68" height="68" class="google" alt="g+"></a>
+        <!--<a href="#"><img src="images/g+.png" width="68" height="68" class="google" alt="g+"></a>-->
           <a href="#"><img src="images/message.png" width="68" height="68" class="message" alt="message"></a>
       </div> <!--end of social imgs-->
       
