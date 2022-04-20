@@ -4,8 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
+use App\Http\Models\ContactUs;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ArticleController;
-use App\Http\Models\chef;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -102,10 +104,11 @@ Route::get("/about-us" , function(){
 });
 */
 
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::resource('articles', ArticleController::class);
 
 // Route::get('/home', function(){
 //     return view('home', ['chefs'=>chef::index()]);
