@@ -110,6 +110,8 @@ Route::get("/about-us" , function(){
 
 Route::resource('articles', ArticleController::class);
 
+Route::get('/article/cetak_pdf', [ArticleController::class, 'cetak_pdf'])->name('cetak_pdf');
+
 // Route::get('/home', function(){
 //     return view('home', ['chefs'=>chef::index()]);
 // });

@@ -6,11 +6,13 @@
         </div>
     @endif
     <div class="row">
+        <div style="margin:0px 0px 0px 70px;">
+            <a class="btn btn-success" href="{{ route('cetak_pdf') }}"> Cetak PDF </a>
+        </div>
         <div class="float-right my-2" >
-            <a style="margin-left:1220px;" class="btn btn-success" href="{{ route('articles.create') }}"> Input Article</a>
+            <a style="margin-left:70px;" class="btn btn-primary" href="{{ route('articles.create') }}"> Input Article</a>
         </div>
-        </div>
-    </div>
+    </div><br/> 
         <table class="table table-bordered" style="width:95%;margin: 0 auto;">
         <tr>
             <th>Judul</th>
